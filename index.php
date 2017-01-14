@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <!--PHP imports-->
-<?php 
-   include("functions/category.php");
-   include("functions/dbcon.php");
-   //Call Function ToConnect To The DB
-   connectDB();
-   ?>
+<?php
+include("functions/Functions.php");
+include("includes/ConnectDB.php");
+//Call Function ToConnect To The DB
+connectDB();
+?>
 <!--PHP imports End -->
 <html>
    <head>
       <title>E-Wagon</title>
       <!--Other Imports  -->
-      <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="css/material.css">
-      <link rel="stylesheet" href="css/materialCustom.css">
-      <script src="js/material.js"></script>
-      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+	  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="css/MaterialCustom.css">
 	  <!--Other Imports End -->
    </head>
    <body>
@@ -25,9 +25,9 @@
          <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Categories</span>
             <nav class="mdl-navigation">
-               <?php 
-                  getCats()?>
-               <a class="mdl-navigation__link" href="">Toys</a>  
+               <?php
+getCats();
+?> 
             </nav>
          </div>
          <!--Left Alligned Drawer Ends Here -->
@@ -50,10 +50,11 @@
                                  <input class="mdl-textfield__input" style="border-bottom: 1px solid rgba(245,245,245, 0.9);" type="text" id="sample3">
                                  <label class="mdl-textfield__labelWhite" for="sample3">Search</label>
                               </div>
-                           </form>
-                           <button class="mdl-button mdl-js-button mdl-button--icon">
+							   <button class="mdl-button mdl-js-button mdl-button--icon">
                            <i class="material-icons">search</i>
                            </button>
+                           </form>
+                          
                         </nav>
                      </div>
                      <!--Header Container Ends Here -->
@@ -61,7 +62,12 @@
                   <main class="mdl-layout__content">
                      <div class="page-content">
                         <!-- Conent Goes Here -->
-                        CONTENT
+					 
+					<?php
+getPro();
+?>
+						      <!-- Conent Ends Here -->
+							     <!-- Footer Starts Here -->
                         <footer class="mdl-mega-footer">
                            <div class="mdl-mega-footer__middle-section">
                               <div class="mdl-mega-footer__drop-down-section">
@@ -99,6 +105,7 @@
                                  <li><a href="#">Privacy & Terms</a></li>
                               </ul>
                            </div>
+						       <!-- Footer Ends Here -->
                         </footer>
                      </div>
                   </main>
