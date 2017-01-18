@@ -13,21 +13,21 @@ connectDB();
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+      <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
       <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
       <script src="http://cdn.tinymce.com/4/tinymce.min.js"> </script>
-      <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
       <link rel="stylesheet" href="/css/MaterialCustom.css">
       <script src="/js/CustomJS.js"></script>
       <!--Other Imports End -->
    </head>
    <body bgcolor="#3f51b5">
-      <form action="insert.php" method="post" enctype="multipart/form-data" >
+      <form name="productForm" action="insert.php" method="post" enctype="multipart/form-data" >
          <table class="mdl-data-table mdl-js-data-table" align="center" >
             <h3 align="center" style="color:#ffffff">Add A Product</h3>
             <tbody>
                <tr>
-                  <td class="mdl-data-table__cell--non-numeric"><b>Product Title</b></td>
-                  <td class="mdl-data-table__cell--non-numeric">
+                  <td class="mdl-data-table__cell"><b>Product Title</b></td>
+                  <td class="mdl-data-table__cell">
                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input name="product_title" class="mdl-textfield__input" type="text" id="productTitle" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+">
                         <label class="mdl-textfield__label" for="productTitle">Enter Product Title</label>
