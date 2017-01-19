@@ -240,8 +240,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__labelWhite,
 
 /*Custom Content Card Layout*/
   .cust-card-square.mdl-card {
-    width: 320px;
-    height: 320px;
+    width: 341px;
+    height: 341px;
     float: left;
     margin: 1rem;
    
@@ -260,12 +260,31 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__labelWhite,
     background: #ff9800;
   }
  
-/*Custom Image For Card Layout*/
+/*Custom Image For Card Layout Display Products*/
 .imgRESIZE {
-	
-
-  max-width:320px;
-  max-height:206px;
+  max-width:330px;
+  max-height:216px;
 margin:auto;
+}
 
+
+/*Custom Size For Button Layout Inside Card*/
+.mdl-button--fab.mdl-button--mini-fab {
+    height: 30px;
+    min-width: 30px;
+    width: 30px;
+}
+
+/*Custom Index Ewagon HREF*/
+.Chref {
+    display: block;
+    position: relative;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: .02em;
+    font-weight: 400;
+    box-sizing: border-box;
+	color:#ffffff;
+	text-decoration:none;
 }

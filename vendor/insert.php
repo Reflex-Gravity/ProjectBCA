@@ -26,7 +26,7 @@ connectDB();
             <h3 align="center" style="color:#ffffff">Add A Product</h3>
             <tbody>
                <tr>
-                  <td class="mdl-data-table__cell"><b>Product Title</b></td>
+                  <td class="mdl-data-table__cell--non-numeric"><b>Product Title</b></td>
                   <td class="mdl-data-table__cell">
                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input name="product_title" class="mdl-textfield__input" type="text" id="productTitle" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+">

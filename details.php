@@ -26,8 +26,8 @@
             <span class="mdl-layout-title">Categories</span>
             <nav class="mdl-navigation">
                <?php
-                  getCats();?>
-				
+                  getCats();
+                  ?> 
             </nav>
          </div>
          <!--Left Alligned Drawer Ends Here -->
@@ -37,22 +37,14 @@
                <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                   <header class="mdl-layout__header">
                      <!--Headder Container Starts Here -->
-                     <div class="mdl-layout__header-row">  
-						
-						 <a class="Chref" href="">E - Wagon</a>
+                     <div class="mdl-layout__header-row">
+                        <span class="mdl-layout-title">E-Wagon</span>
                         <div class="mdl-layout-spacer"></div>
                         <nav class="mdl-navigation mdl-layout--large-screen-only">
+                           <a class="mdl-navigation__link" href=""> Sign-Up</a>
+                           <a class="mdl-navigation__link" href="">Login</a>
 						
-						  <a class="mdl-navigation__link" href="customer/account.php"> Welcome Guest !
-						   <i class="material-icons">person_outline</i></a> </a>
-						   
-                           <a class="mdl-navigation__link" href="">Signup
-						   <i class="material-icons">person_add</i></a>
-						   
-                           <a class="mdl-navigation__link" href="">Login
-						   <i class="material-icons">lock_open</i></a>
-						
-                         
+                           <a class="mdl-navigation__link" href=""> Welcome Guest !</a>
 						       
 						   <a class="mdl-navigation__link" href="cart.php">Cart &nbsp
 						   <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">local_grocery_store</div></a>
@@ -72,10 +64,27 @@
                   <main class="mdl-layout__content">
                      <div class="page-content">
                         <!-- Conent Goes Here -->
-                        <?php
-                           getPro();
-						   getCatPro();
-                           ?>
+<?php
+
+if(isset($_GET['product_id'])){
+	$product_id=$_GET['product_id'];
+                 global $con;
+    $get_pro = "select * from product where product_id='$product_id'";
+    $run_pro = mysqli_query($con, $get_pro);
+    while ($row_pro = mysqli_fetch_array($run_pro)) {
+        
+        $product_id    = $row_pro['product_id'];
+        $product_title = $row_pro['product_title'];
+        $product_price = $row_pro['product_price'];
+        $product_image = $row_pro['product_image'];
+		$pro_desc=$row_pro['product_description'];
+
+
+
+	}
+}
+?>
+   
                         <!-- Conent Ends Here -->
 						
                      </div>
