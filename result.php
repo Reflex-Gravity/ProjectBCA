@@ -10,6 +10,10 @@
 <html>
    <head>
       <title>E-Wagon</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="E-Wagon">
+      <meta name="keywords" content="ecommerce,ewagon">
+      <meta name="author" content="Clinton Dsouza">
       <!--Other Imports  -->
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -66,46 +70,48 @@
                   <main class="mdl-layout__content">
                      <div class="page-content">
                         <!-- Conent Goes Here -->
-                        <!-- Conent Goes Here -->
                         <?php
-                           if(isset($_GET['product_id'])){
-                           	$product_id=$_GET['product_id'];
-                                            global $con;
-                               $get_pro = "select * from product where product_id='$product_id'";
-                               $run_pro = mysqli_query($con, $get_pro);
-                               while ($row_pro = mysqli_fetch_array($run_pro)) {
-                                   
-                                   $product_id    = $row_pro['product_id'];
-                                   $product_title = $row_pro['product_title'];
-                                   $product_price = $row_pro['product_price'];
-                                   $product_image = $row_pro['product_image'];
-                           		$pro_desc=$row_pro['product_description'];
+                           if(isset($_GET['search'])){
+                           
+                           $searchP = $_GET['txtsearch'];
+                           $get_pro = ("select * from product where product_keywords like '%$searchP%'");
+                           $run_pro = mysqli_query($con, $get_pro);
+                           while ($row_pro = mysqli_fetch_array($run_pro)) {
+                           
+                           $product_id    = $row_pro['product_id'];
+                           $product_cat   = $row_pro['product_cat'];
+                           $product_brand = $row_pro['product_brand'];
+                           $product_title = $row_pro['product_title'];
+                           $product_price = $row_pro['product_price'];
+                           $product_image = $row_pro['product_image'];
+                           
                            echo "  <!-- Square card -->\n"; 
-                           echo "  <div class=\"mdl-card mdl-shadow--2dp custDet-card-square\">\n"; 
+                           echo "  <div class=\"mdl-card mdl-shadow--2dp cust-card-square\">\n"; 
                            echo "    <div class=\"mdl-card__title mdl-card--expand\">\n"; 
-                           echo " <image class=\"imgRESIZEdet\" src=\"../images/product/$product_image\">\n"; 
+                           echo " <image class=\"imgRESIZE\" src=\"../images/product/$product_image\">\n"; 
                            echo "\n";
                            echo "    </div>\n"; 
                            echo "    <div class=\"mdl-card__supporting-text\">\n"; 
-                           echo "   <big><b>  $product_title <br> &#8377; $product_price </b><big>\n"; 
-                           echo "<p>$pro_desc\n"; 
-                           echo "</p>\n";
+                           echo "     $product_title <br> &#8377; $product_price\n"; 
                            echo "    </div>\n"; 
-                           echo "    <div class=\"mdl-card__actions mdl-card--border\">\n";  
-                           echo "<div class=\"buttonHolder\">\n"; 
-                           echo "<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\">\n"; 
-                           echo "  Add To Cart\n"; 
+                           echo "    <div class=\"mdl-card__actions mdl-card--border\">\n"; 
+                           echo "     <a href=details.php?product_id=$product_id <a class=\"mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect\">\n"; 
+                           echo "          View Details\n"; 
+                           echo "        </a></a>\n"; 
+                           echo "<a href=index.php?product_id=$product_id>\n"; 
+                           echo "<button class=\"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored\" title=\"Add To Cart\" style=\"float:right;width:30px;height:30px;min-width:30px\">\n"; 
+                           echo "  <i class=\"material-icons\">add</i>\n"; 
                            echo "</button>\n"; 
-                           echo "</div>\n";
                            echo "</a>\n";
                            echo "    </div>\n"; 
                            echo "  </div>\n";
-                              
                            
-                           
-                           	}
                            }
-                           ?>
+                           
+                           
+                           }
+                           
+                              ?>
                         <!-- Conent Ends Here -->
                      </div>
                   </main>

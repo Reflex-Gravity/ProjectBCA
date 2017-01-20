@@ -10,6 +10,10 @@
 <html>
    <head>
       <title>E-Wagon</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="E-Wagon">
+      <meta name="keywords" content="ecommerce,ewagon">
+      <meta name="author" content="Clinton Dsouza">
       <!--Other Imports  -->
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -27,7 +31,6 @@
             <nav class="mdl-navigation">
                <?php
                   getCats();?>
-				
             </nav>
          </div>
          <!--Left Alligned Drawer Ends Here -->
@@ -37,31 +40,26 @@
                <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                   <header class="mdl-layout__header">
                      <!--Headder Container Starts Here -->
-                     <div class="mdl-layout__header-row">  
-						
-						 <a class="Chref" href="">E - Wagon</a>
+                     <div class="mdl-layout__header-row">
+                        <a class="Chref" href="index.php">E - Wagon</a>
                         <div class="mdl-layout-spacer"></div>
                         <nav class="mdl-navigation mdl-layout--large-screen-only">
-						
-						  <a class="mdl-navigation__link" href="customer/account.php"> Welcome Guest !
-						   <i class="material-icons">person_outline</i></a> </a>
-						   
+                           <a class="mdl-navigation__link" href="customer/account.php"> Welcome Guest !
+                           <i class="material-icons">person_outline</i></a> </a>
                            <a class="mdl-navigation__link" href="">Signup
-						   <i class="material-icons">person_add</i></a>
-						   
+                           <i class="material-icons">person_add</i></a>
                            <a class="mdl-navigation__link" href="">Login
-						   <i class="material-icons">lock_open</i></a>
-						
-                         
-						       
-						   <a class="mdl-navigation__link" href="cart.php">Cart &nbsp
-						   <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">local_grocery_store</div></a>
-                           <form action="php/result.php" enctype="multipart/form-data" >
+                           <i class="material-icons">lock_open</i></a>
+                           <a class="mdl-navigation__link" href="cart.php">
+                              Cart &nbsp
+                              <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">local_grocery_store</div>
+                           </a>
+                           <form action="result.php" enctype="multipart/form-data" >
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                 <input class="mdl-textfield__input" style="border-bottom: 1px solid rgba(245,245,245, 0.9);" type="text" id="sample3">
+                                 <input name="txtsearch" class="mdl-textfield__input" style="border-bottom: 1px solid rgba(245,245,245, 0.9);" type="text" id="sample3">
                                  <label class="mdl-textfield__labelWhite" for="sample3">Search</label>
                               </div>
-                              <button class="mdl-button mdl-js-button mdl-button--icon">
+                              <button name="search" class="mdl-button mdl-js-button mdl-button--icon">
                               <i class="material-icons">search</i>
                               </button>
                            </form>
@@ -74,10 +72,9 @@
                         <!-- Conent Goes Here -->
                         <?php
                            getPro();
-						   getCatPro();
+                           getCatPro();
                            ?>
                         <!-- Conent Ends Here -->
-						
                      </div>
                   </main>
                </div>
