@@ -14,6 +14,7 @@
       <meta name="description" content="E-Wagon">
       <meta name="keywords" content="ecommerce,ewagon">
       <meta name="author" content="Clinton Dsouza">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--Other Imports  -->
       <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -72,10 +73,17 @@
                         <!-- Conent Goes Here -->
                         <?php
                            if(isset($_GET['search'])){
-                           
+                             //error_reporting(E_ERROR | E_PARSE); //Needs To Be Fixed 
                            $searchP = $_GET['txtsearch'];
                            $get_pro = ("select * from product where product_keywords like '%$searchP%'");
                            $run_pro = mysqli_query($con, $get_pro);
+                           $count=mysqli_num_rows($run_pro);
+                           if($count==0)
+                           {
+                           echo "<h4 class=\"mdl-typography--display-3\" align=\"center\">No Products Found</h4>\n";//needs more styling
+                           echo "<center> <a href=index.php <a class=\"mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect\">\n"; 
+                           echo "Back To Home</center>\n"; 
+                           }
                            while ($row_pro = mysqli_fetch_array($run_pro)) {
                            
                            $product_id    = $row_pro['product_id'];
