@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--PHP imports-->
 <?php
+
    include("functions/Functions.php");
    include("includes/ConnectDB.php");
    //Call Function ToConnect To The DB
@@ -13,15 +14,15 @@
       <meta charset="UTF-8">
       <meta name="description" content="E-Wagon">
       <meta name="keywords" content="ecommerce,ewagon">
-      <meta name="author" content="Clinton Dsouza">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Clinton Dsouza,Christon Dsouza,Herald Soans">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--Other Imports  -->
-      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
-      <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <link rel="stylesheet" href="css/roboto.css" type="text/css">
+      <link rel="stylesheet" href="css/icon.css" type="text/css">
+      <link rel="stylesheet" href="css/Material.min.css" type="text/css">
+      <script type="text/javascript" src="js/Material.min.js" async></script>
       <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="css/MaterialCustom.css">
+      <link rel="stylesheet" href="css/MaterialCustom.css" type="text/css">
       <!--Other Imports End -->
    </head>
    <body>
@@ -53,8 +54,9 @@
                            <i class="material-icons">lock_open</i></a>
                            <a class="mdl-navigation__link" href="cart.php">
                               Cart &nbsp
-                              <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">local_grocery_store</div>
-                           </a>
+
+							 <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="<?php total_items();?>" >local_grocery_store</div>
+						   </a>
                            <form action="result.php" enctype="multipart/form-data" >
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                  <input name="txtsearch" class="mdl-textfield__input" style="border-bottom: 1px solid rgba(245,245,245, 0.9);" type="text" id="sample3">
@@ -69,11 +71,15 @@
                      <!--Header Container Ends Here -->
                   </header>
                   <main class="mdl-layout__content">
+				  <?php addcart();?>
                      <div class="page-content">
                         <!-- Conent Goes Here -->
                         <?php
+
                            getPro();
                            getCatPro();
+
+
                            ?>
                         <!-- Conent Ends Here -->
                      </div>

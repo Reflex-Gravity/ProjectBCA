@@ -1,301 +1,448 @@
 @charset "UTF-8";
 /*ChangeWhiteLable*/
+
 .mdl-textfield__labelWhite {
-bottom: 0;
-color: rgba(255, 255, 255, 0.9);
-font-size: 15px;
-left: 0;
-right: 0;
-pointer-events: none;
-position: absolute;
-display: block;
-top: 24px;
-width: 100%;
-overflow: hidden;
-white-space: nowrap;
-text-align: left;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 24px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
 }
 .mdl-textfield.is-dirty .mdl-textfield__labelWhite,
 .mdl-textfield.has-placeholder .mdl-textfield__labelWhite {
-visibility: hidden;
+    visibility: hidden;
 }
 .mdl-textfield--floating-label .mdl-textfield__labelWhite {
-transition-duration: 0.2s;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__labelWhite {
-transition: none;
+    transition: none;
 }
 fieldset[disabled] .mdl-textfield .mdl-textfield__labelWhite,
 .mdl-textfield.is-disabled.is-disabled .mdl-textfield__labelWhite {
-color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__labelWhite,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__labelWhite,
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__labelWhite {
-color: rgb(63, 81, 181);
-font-size: 12px;
-top: 4px;
-visibility: visible;
+    color: rgb(63, 81, 181);
+    font-size: 12px;
+    top: 4px;
+    visibility: visible;
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__expandable-holder .mdl-textfield__labelWhite,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__expandable-holder .mdl-textfield__labelWhite,
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__expandable-holder .mdl-textfield__labelWhite {
-top: -16px;
+    top: -16px;
 }
 .mdl-textfield--floating-label.is-invalid .mdl-textfield__labelWhite {
-color: rgb(213, 0, 0);
-font-size: 12px;
+    color: rgb(213, 0, 0);
+    font-size: 12px;
 }
 .mdl-textfield__labelWhite:after {
-background-color: rgb(63, 81, 181);
-bottom: 20px;
-content: '';
-height: 2px;
-left: 45%;
-position: absolute;
-transition-duration: 0.2s;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-visibility: hidden;
-width: 10px;
+    background-color: rgb(63, 81, 181);
+    bottom: 20px;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    width: 10px;
 }
 .mdl-textfield.is-focused .mdl-textfield__labelWhite:after {
-left: 0;
-visibility: visible;
-width: 100%;
+    left: 0;
+    visibility: visible;
+    width: 100%;
 }
 .mdl-textfield.is-invalid .mdl-textfield__labelWhite:after {
-background-color: rgb(213, 0, 0);
+    background-color: rgb(213, 0, 0);
 }
 .mdl-textfield__error {
-color: rgb(213, 0, 0);
-position: absolute;
-font-size: 12px;
-margin-top: 3px;
-visibility: hidden;
-display: block;
+    color: rgb(213, 0, 0);
+    position: absolute;
+    font-size: 12px;
+    margin-top: 3px;
+    visibility: hidden;
+    display: block;
 }
 .mdl-textfield.is-invalid .mdl-textfield__error {
-visibility: visible;
+    visibility: visible;
 }
 .mdl-textfield__expandable-holder {
-display: inline-block;
-position: relative;
-margin-left: 32px;
-transition-duration: 0.2s;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-display: inline-block;
-max-width: 0.1px;
+    display: inline-block;
+    position: relative;
+    margin-left: 32px;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    max-width: 0.1px;
 }
 .mdl-textfield.is-focused .mdl-textfield__expandable-holder,
 .mdl-textfield.is-dirty .mdl-textfield__expandable-holder {
-max-width: 600px;
+    max-width: 600px;
 }
 .mdl-textfield__expandable-holder .mdl-textfield__labelWhite:after {
-bottom: 0;
+    bottom: 0;
 }
 /*Drop Down For Vendor*/
+
 .mdl-select {
-position: relative;
-font-size: 16px;
-display: inline-block;
-box-sizing: border-box;
-width: 300px;
-max-width: 100%;
-margin: 0;
-padding: 20px 0;
+    position: relative;
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
 }
 .mdl-select__input {
-border: none;
-border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-display: inline-block;
-font-size: 16px;
-margin: 0;
-padding: 4px 0;
-width: 100%;
-background: 16px;
-text-align: left;
-color: inherit;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 16px;
+    text-align: left;
+    color: inherit;
 }
 .mdl-select.is-focused .mdl-select__input {
-outline: none;
+    outline: none;
 }
 .mdl-select.is-invalid .mdl-select__input {
-border-color: rgb(222, 50, 38);
-box-shadow: none;
+    border-color: rgb(222, 50, 38);
+    box-shadow: none;
 }
 .mdl-select.is-disabled .mdl-select__input {
-background-color: transparent;
-border-bottom: 1px dotted rgba(0, 0, 0, 0.12);
+    background-color: transparent;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.12);
 }
 .mdl-select__label {
-bottom: 0;
-color: rgba(0, 0, 0, 0.26);
-font-size: 16px;
-left: 0;
-right: 0;
-pointer-events: none;
-position: absolute;
-top: 24px;
-width: 100%;
-overflow: hidden;
-white-space: nowrap;
-text-align: left;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.26);
+    font-size: 16px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
 }
 .mdl-select.is-dirty .mdl-select__label {
-visibility: hidden;
+    visibility: hidden;
 }
 .mdl-select--floating-label .mdl-textfield__label {
--webkit-transition-duration: 0.2s;
-transition-duration: 0.2s;
--webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mdl-select--floating-label.is-focused .mdl-select__label,
 .mdl-select--floating-label.is-dirty .mdl-select__label {
-color: rgb(63, 81, 181);
-font-size: 12px;
-top: 4px;
-visibility: visible;
+    color: rgb(63, 81, 181);
+    font-size: 12px;
+    top: 4px;
+    visibility: visible;
 }
 .mdl-select--floating-label.is-focused .mdl-select__expandable-holder .mdl-select__label,
 .mdl-select--floating-label.is-dirty .mdl-select__expandable-holder .mdl-select__label {
-top: -16px;
+    top: -16px;
 }
 .mdl-select--floating-label.is-invalid .mdl-select__label {
-color: rgb(222, 50, 38);
-font-size: 12px;
+    color: rgb(222, 50, 38);
+    font-size: 12px;
 }
 .mdl-select__label:after {
-background-color: rgb(63, 81, 181);
-bottom: 20px;
-content: '';
-height: 2px;
-left: 45%;
-position: absolute;
--webkit-transition-duration: 0.2s;
-transition-duration: 0.2s;
--webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-visibility: hidden;
-width: 10px;
+    background-color: rgb(63, 81, 181);
+    bottom: 20px;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    width: 10px;
 }
 .mdl-select.is-focused .mdl-select__label:after {
-left: 0;
-visibility: visible;
-width: 100%;
+    left: 0;
+    visibility: visible;
+    width: 100%;
 }
 .mdl-select.is-invalid .mdl-select__label:after {
-background-color: rgb(222, 50, 38);
+    background-color: rgb(222, 50, 38);
 }
 .mdl-select__error {
-color: rgb(222, 50, 38);
-position: absolute;
-font-size: 12px;
-margin-top: 3px;
-visibility: hidden;
+    color: rgb(222, 50, 38);
+    position: absolute;
+    font-size: 12px;
+    margin-top: 3px;
+    visibility: hidden;
 }
 .mdl-select.is-invalid .mdl-select__error {
-visibility: visible;
+    visibility: visible;
 }
 .mdl-select__expandable-holder {
-display: inline-block;
-position: relative;
-margin-left: 32px;
--webkit-transition-duration: 0.2s;
-transition-duration: 0.2s;
--webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-display: inline-block;
-max-width: 0.1px;
+    display: inline-block;
+    position: relative;
+    margin-left: 32px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    max-width: 0.1px;
 }
 .mdl-select.is-focused .mdl-select__expandable-holder,
 .mdl-select.is-dirty .mdl-select__expandable-holder {
-max-width: 600px;
+    max-width: 600px;
 }
 .mdl-select__expandable-holder .mdl-select__label:after {
-bottom: 0;
+    bottom: 0;
 }
 /*File Select For Vendor*/
+
 .mdl-button--file input {
-cursor: pointer;
-height: 100%;
-right: 0;
-opacity: 0;
-position: absolute;
-top: 0;
-width: 300px;
-z-index: 4;
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
 }
 .mdl-textfield--file .mdl-textfield__input {
-box-sizing: border-box;
-width: calc(100% - 32px);
+    box-sizing: border-box;
+    width: calc(100% - 32px);
 }
 .mdl-textfield--file .mdl-button--file {
-right: 0;
+    right: 0;
 }
 /*Custom Content Card Layout For Index*/
+
 .cust-card-square.mdl-card {
-width: 341px;
-height: 341px;
-float: left;
-margin: 1rem;
+    width: 341px;
+    height: 341px;
+    float: left;
+    margin: 1rem;
 }
 .cust-card-square.mdl-card:hover {
-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
 }
-.cust-card-square > .mdl-card__title {
-color: #fff;
-background: #ffffff;
+.cust-card-square>.mdl-card__title {
+    color: #fff;
+    background: #ffffff;
 }
-.cust-card-square > .mdl-card__accent {
-background: #ff9800;
+.cust-card-square>.mdl-card__accent {
+    background: #ff9800;
 }
 /*Custom Image For Card Layout Display Products*/
+
 .imgRESIZE {
-max-width:330px;
-max-height:216px;
-margin:auto;
+    max-width: 330px;
+    max-height: 216px;
+    margin: auto;
 }
 /*Custom Size For Button Layout Inside Card*/
+
 .mdl-button--fab.mdl-button--mini-fab {
-height: 30px;
-min-width: 30px;
-width: 30px;
+    height: 30px;
+    min-width: 30px;
+    width: 30px;
 }
 /*Custom Index Ewagon HREF*/
+
 .Chref {
-display: block;
-position: relative;
-font-family: "Roboto","Helvetica","Arial",sans-serif;
-font-size: 20px;
-line-height: 1;
-letter-spacing: .02em;
-font-weight: 400;
-box-sizing: border-box;
-color:#ffffff;
-text-decoration:none;
+    display: block;
+    position: relative;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: .02em;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
 }
 /*Custom Content Card Layout For Details*/
+
 .custDet-card-square.mdl-card {
-width: auto;
-height: auto;
+    width: auto;
+    height: auto;
 }
 .custDet-card-square.mdl-card:hover {
-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
 }
-.custDet-card-square > .mdl-card__title {
-color: #fff;
-background: #ffffff;
+.custDet-card-square>.mdl-card__title {
+    color: #fff;
+    background: #ffffff;
 }
-.cust-cardDet-square > .mdl-card__accent {
-background: #ff9800;
+.cust-cardDet-square>.mdl-card__accent {
+    background: #ff9800;
 }
 /*Custom Image For Card Layout For Details*/
+
 .imgRESIZEdet {
-max-width:370px;
-max-height:370px;
-margin:auto;
+    max-width: 370px;
+    max-height: 370px;
+    margin: auto;
 }
 /*Custom Button rapper For Details*/
-.buttonHolder{ text-align: center; }
+
+.buttonHolder {
+    text-align: center;
+}
+.pink {
+    padding: 25px;
+    background: #ff0052;
+    margin: 0;
+    color: #ecf0f1;
+}
+h2.pink i.material-icons {
+    text-align: left !important;
+}
+.pink h2 {
+    text-align: right;
+    /* display: inline-block; */
+}
+.pink strong {
+    text-align: right;
+}
+.pink i {
+    /* float: left; */
+    
+    font-size: 3.5rem;
+    background: white;
+    padding: 19px;
+    border-radius: 50%;
+    color: #ff0052;
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+.pink h2 strong {
+    /* padding-top: 120px; */
+}
+.pink {
+    position: relative;
+}
+/*Custom Table Align*/
+
+.tabalign th {
+    text-align: center !important;
+}
+.tabalign td {
+    text-align: center !important;
+}
+/*Toast For Quantity In Cart */
+
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    
+    min-width: 250px;
+    /* Set a default minimum width */
+    
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    
+    background-color: #333;
+    /* Black background color */
+    
+    color: #fff;
+    /* White text color */
+    
+    text-align: center;
+    /* Centered text */
+    
+    border-radius: 2px;
+    /* Rounded borders */
+    
+    padding: 16px;
+    /* Padding */
+    
+    position: fixed;
+    /* Sit on top of the screen */
+    
+    z-index: 1;
+    /* Add a z-index if needed */
+    
+    left: 50%;
+    /* Center the snackbar */
+    
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

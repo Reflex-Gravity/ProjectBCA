@@ -10,14 +10,18 @@ connectDB();
    <head>
       <title>Add Products</title>
       <!--Other Imports  -->
-      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
-      <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
-      <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-      <script src="http://cdn.tinymce.com/4/tinymce.min.js"> </script>
-      <link rel="stylesheet" href="/css/MaterialCustom.css">
-      <script src="/js/CustomJS.js"></script>
+  <link rel="stylesheet" href="/css/roboto.css" type="text/css">
+        <link rel="stylesheet" href="/css/icon.css" type="text/css">
+        <link rel="stylesheet" href="/css/Material.min.css" type="text/css">
+        <script type="text/javascript" src="/js/Material.min.js" async></script>
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+      
+      <link rel="stylesheet" href="/css/MaterialCustom.css" >
+	  <script src="http://cdn.tinymce.com/4/tinymce.min.js"> </script>
+	  <script>
+        tinymce.init({selector:'textarea'});
+</script>
+      <script src="/js/CustomJS.js" async></script>
       <!--Other Imports End -->
    </head>
    <body bgcolor="#3f51b5">
@@ -29,7 +33,7 @@ connectDB();
                   <td class="mdl-data-table__cell--non-numeric"><b>Product Title</b></td>
                   <td class="mdl-data-table__cell">
                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input name="product_title" class="mdl-textfield__input" type="text" id="productTitle" required pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+">
+                        <input name="product_title" class="mdl-textfield__input" type="text" id="productTitle" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+">
                         <label class="mdl-textfield__label" for="productTitle">Enter Product Title</label>
                      </div>
                   
@@ -41,7 +45,7 @@ connectDB();
                   <td class="mdl-data-table__cell--non-numeric"><b>Product Category</b></td>
                   <td class="mdl-data-table__cell--non-numeric">
                      <div class="mdl-select mdl-js-select mdl-select--floating-label">
-                        <select class="mdl-select__input" id="Category" name="product_category" required>
+                        <select class="mdl-select__input" id="Category" name="product_category">
                            <option value=""></option>
                            <?php
 $get_cats = "select * from categories";
@@ -64,7 +68,7 @@ while ($row_cats = mysqli_fetch_array($run_cats)) {
                   <td class="mdl-data-table__cell--non-numeric"><b>Product Brand</b></td>
                   <td class="mdl-data-table__cell--non-numeric">
                      <div class="mdl-select mdl-js-select mdl-select--floating-label">
-                        <select class="mdl-select__input" id="Brand" name="product_brand" required>
+                        <select class="mdl-select__input" id="Brand" name="product_brand">
                            <option value=""></option>
                            <?php
 $get_brands = "select * from brands";
@@ -101,7 +105,7 @@ while ($row_brands = mysqli_fetch_array($run_brands)) {
                   <td class="mdl-data-table__cell--non-numeric"><b>Product Price</b></td>
                   <td class="mdl-data-table__cell--non-numeric">
                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input name="product_price" class="mdl-textfield__input" type="number" min="0" id="Price" required >
+                        <input name="product_price" class="mdl-textfield__input" type="number" min="0" id="Price">
                         <label class="mdl-textfield__label" for="Price">Enter Product Price</label>
                      </div>
                   </td>
@@ -114,7 +118,6 @@ while ($row_brands = mysqli_fetch_array($run_brands)) {
                      <div class="mdl-textfield mdl-js-textfield">
                         <textarea name="product_dsc" class="mdl-textfield__input" type="text" rows= "3" id="Description"></textarea>
                         <label class="mdl-textfield__label" for="Description">
-                           <script>tinymce.init({selector:'textarea'});</script>
                         </label>
                      </div>
                   </td>
@@ -125,7 +128,7 @@ while ($row_brands = mysqli_fetch_array($run_brands)) {
                   <td class="mdl-data-table__cell--non-numeric"><b>Product Keywords</b></td>
                   <td class="mdl-data-table__cell--non-numeric">
                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input name="product_keyword" class="mdl-textfield__input" type="text" id="Keywords" required>
+                        <input name="product_keyword" class="mdl-textfield__input" type="text" id="Keywords">
                         <label class="mdl-textfield__label" for="Keywords">Enter Product Keywords</label>
                      </div>
                   </td>
@@ -134,7 +137,7 @@ while ($row_brands = mysqli_fetch_array($run_brands)) {
             <tbody>
                <tr>
                   <td colspan="2" class="mdl-data-table__cell--non-numeric">
-                     <center>  <button name="add" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                     <center>  <button name="add" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick=validateForm()>
                         Add Product
                         </button> 
                      </center>
