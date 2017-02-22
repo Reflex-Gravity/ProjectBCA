@@ -306,7 +306,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__labelWhite,
     max-height: 370px;
     margin: auto;
 }
-/*Custom Button rapper For Details*/
+/*Custom Button wrapper For Details*/
 
 .buttonHolder {
     text-align: center;
@@ -445,4 +445,50 @@ However, delay the fade out process for 2.5 seconds */
         bottom: 0;
         opacity: 0;
     }
+}
+
+/*Custom Registrartion Page*/
+.register-layout-transparent {
+  background:url(../images/bg/pattern.png);
+}
+.register-layout-transparent .mdl-layout__header,
+.register-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+/*Payment Card*/
+  .card-container {
+	width: 100%;
+	max-width: 350px;
+	margin: 50px auto;
+}
+
+form {
+	margin: 30px;
+}
+input {
+	width: 200px;
+	margin: 10px auto;
+	display: block;
+}
+
+/*Sort Button*/		
+.ap {
+    position: absolute;
+    right: 31px;
+    bottom: 17px;
+    padding: 25px;
+    z-index: 99;
+}
+
+
+
+/*Footer*/
+.full-width{
+
+
+
+   width:100%;
+ 
 }

@@ -131,13 +131,14 @@ componentHandler.register({
 });
 //Validate Form At The End 
 function validateForm() {
+	$('input');
     if ($('input[type=text][required]').length == 0) {
-      jQuery('input[type=text]').attr('required', 'true');
+      jQuery('input[type=text],input[type=password],input[type=file],input[type=email],textarea').attr('required', 'true');
       return false;
     }
   }
   //Snackbar For Quantity In Cart
-function myFunction() {
+function snackbardisp() {
   // Get the snackbar DIV
   var x = document.getElementById("snackbar")
     // Add the "show" class to DIV
